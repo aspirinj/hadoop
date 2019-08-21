@@ -38,10 +38,10 @@ import java.lang._ //java.lang包里面所有的东西
 
 上面已经声明了一个String类型的不可变的变量，下面我们可以使用该变量，比如要打印出来：
 
-1.  scala> println(myStr)
-2.  Hello  World!
-
-scala
+```java
+scala> println(myStr)
+Hello  World!
+```
 
 上面的第1行代码是我们在scala命令提示符后面输入的代码，第2行是执行结果。
 
@@ -98,6 +98,6 @@ scala
 5.  scala>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4NTEzOTMxMSwxMDg2MjM1MTM3LC0xNT
+eyJoaXN0b3J5IjpbLTg2NTk4OTQzMCwxMDg2MjM1MTM3LC0xNT
 QzMjc5MTM1XX0=
 -->
