@@ -55,17 +55,14 @@ myStr =  "Hello Scala!"
 如果一些变量，需要在初始化以后还要不断修改它的值（比如商品价格），则需要声明为var变量。  
 下面我们把myPrice声明为var变量，并且在声明的时候需要进行初始化：
 
-1.  scala>  var myPrice :  Double  =  9.9
-2.  myPrice:  Double  =  9.9
-
-scala
-
-然后，我们可以再次对myPrice进行赋值：
-
-1.  scala> myPrice =  10.6
-2.  myPrice:  Double  =  10.6
-
-scala
+```scala
+var myPrice :  Double  =  9.9
+myPrice:  Double  =  9.9
+```
+```scala
+myPrice =  10.6
+myPrice:  Double  =  10.6
+```
 
 ## 小技巧：如何在Scala解释器中输入多行代码
 
@@ -95,6 +92,7 @@ scala
 5.  scala>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc0NjAwNzU5LDExNjI2NTI5MTMsLTg2NT
-k4OTQzMCwxMDg2MjM1MTM3LC0xNTQzMjc5MTM1XX0=
+eyJoaXN0b3J5IjpbNDIwNTI2NDY4LDM3NDYwMDc1OSwxMTYyNj
+UyOTEzLC04NjU5ODk0MzAsMTA4NjIzNTEzNywtMTU0MzI3OTEz
+NV19
 -->
