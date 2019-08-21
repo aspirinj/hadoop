@@ -21,8 +21,32 @@ Spark在借鉴Hadoop MapReduce优点的同时，很好地解决了MapReduce所�
 Spark最大的特点就是将计算数据、中间结果都存储在内存中，大大减少了IO开销，因而，Spark更适合于迭代运算比较多的数据挖掘与机器学习运算。使用Hadoop进行迭代计算非常耗资源，因为每次迭代都需要从磁盘中写入、读取中间数据，IO开销大。而Spark将数据载入内存后，之后的迭代计算都可以直接使用内存中的中间结果作运算，避免了从磁盘中频繁读取数据。
 
 在实际进行开发时，使用Hadoop需要编写不少相对底层的代码，不够高效。相对而言，Spark提供了多种高层次、简洁的API，通常情况下，对于实现相同功能的应用程序，Spark的代码量要比Hadoop少2-5倍。更重要的是，Spark提供了实时交互式编程反馈，可以方便地验证、调整算法。  
-尽管Spark相对于Hadoop而言具有较大优势，但Spark并不能完全替代Hadoop，主要用于替代Hadoop中的MapReduce计算模型。实际上，Spark已经很好地融入了Hadoop生态圈，并成为其中的重要一员，它可以借助于YARN实现资源调度管理，借助于HDFS实现分布式存储。此外，Hadoop可以使用廉价的、异构的机器来做分布式存储与计算，但是，Spark对硬件的要求稍高一些，对内存与CPU有一定的要求。
+
+尽管Spark相对于Hadoop而言具有较大优势，但Spark并不能完全替代Hadoop，主要用于替代Hadoop中的MapReduce计
+算模型。实际上，Spark已经很好地融入了Hadoop生态圈，并成为其中的重要一员，它可以借助于YARN实现资源调度管理，借助于HDFS实现分布式存储。此外，Hadoop可以使用廉价的、异构的机器来做分布式存储与计算，但是，Spark对硬件的要求稍高一些，对内存与CPU有一定的要求。
+
+
+### Spark生态系统
+在实际应用中，大数据处理主要包括以下三个类型：  
+ 复杂的批量数据处理：时间跨度通常在数十分钟到数小时之间；  
+ 基于历史数据的交互式查询：时间跨度通常在数十秒到数分钟之间；  
+ 基于实时数据流的数据处理：时间跨度通常在数百毫秒到数秒之间。  
+目前已有很多相对成熟的开源软件用于处理以上三种情景，比如，可以利用Hadoop MapReduce来进行批量数据处理，可以用Impala来进行交互式查询（Impala与Hive相似，但底层引擎不同，提供了实时交互式SQL查询），对于流式数据处理可以采用开源流计算框架Storm。一些企业可能只会涉及其中部分应用场景，只需部署相应软件即可满足业务需求，但是，对于互联网公司而言，通常会同时存在以上三种场景，就需要同时部署三种不同的软件，这样做难免会带来一些问题：  
+ 不同场景之间输入输出数据无法做到无缝共享，通常需要进行数据格式的转换；  
+ 不同的软件需要不同的开发和维护团队，带来了较高的使用成本；  
+ 比较难以对同一个集群中的各个系统进行统一的资源协调和分配。  
+Spark的设计遵循“一个软件栈满足不同应用场景”的理念，逐渐形成了一套完整的生态系统，既能够提供内存计算框架，也可以支持SQL即席查询、实时流式计算、机器学习和图计算等。Spark可以部署在资源管理器YARN之上，提供一站式的大数据解决方案。因此，Spark所提供的生态系统足以应对上述三种场景，即同时支持批处理、交互式查询和流数据处理。  
+现在，Spark生态系统已经成为伯克利数据分析软件栈BDAS（Berkeley Data Analytics Stack）的重要组成部分。BDAS的架构如图所示，从中可以看出，Spark专注于数据的处理分析，而数据的存储还是要借助于Hadoop分布式文件系统HDFS、Amazon S3等来实现的。因此，Spark生态系统可以很好地实现与Hadoop生态系统的兼容，使得现有Hadoop应用程序可以非常容易地迁移到Spark系统中。
+
+![BDAS架构图](http://dblab.xmu.edu.cn/blog/wp-content/uploads/2016/10/图-BDAS架构.jpg)  
+图 BDAS架构  
+Spark的生态系统主要包含了Spark Core、Spark SQL、Spark Streaming、MLLib和GraphX 等组件，各个组件的具体功能如下：  
+*  Spark Core：Spark Core包含Spark的基本功能，如内存计算、任务调度、部署模式、故障恢复、存储管理等。Spark建立在统一的抽象RDD之上，使其可以以基本一致的方式应对不同的大数据处理场景；通常所说的Apache Spark，就是指Spark Core；  
+*  Spark SQL：Spark SQL允许开发人员直接处理RDD，同时也可查询Hive、HBase等外部数据源。Spark SQL的一个重要特点是其能够统一处理关系表和RDD，使得开发人员可以轻松地使用SQL命令进行查询，并进行更复杂的数据分析；  
+*  Spark Streaming：Spark Streaming支持高吞吐量、可容错处理的实时流数据处理，其核心思路是将流式计算分解成一系列短小的批处理作业。Spark Streaming支持多种数据输入源，如Kafka、Flume和TCP套接字等；  
+*  MLlib（机器学习）：MLlib提供了常用机器学习算法的实现，包括聚类、分类、回归、协同过滤等，降低了机器学习的门槛，开发人员只要具备一定的理论知识就能进行机器学习的工作；  
+*  GraphX（图计算）：GraphX是Spark中用于图计算的API，可认为是Pregel在Spark上的重写及优化，Graphx性能良好，拥有丰富的功能和运算符，能在海量数据上自如地运行复杂的图算法。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDczNDIzNzMsMjYyOTk1Njc0LDE4Nj
-gxMzU5NjFdfQ==
+eyJoaXN0b3J5IjpbLTcxNzE3NTcwMSwyNjI5OTU2NzQsMTg2OD
+EzNTk2MV19
 -->
