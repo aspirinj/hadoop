@@ -51,7 +51,6 @@ scala
 1.  scala> myStr =  "Hello Scala!"
 2.  <console>:27: error: reassignment to val
 3.   myStr =  "Hello Scala!"
-4.    ^
 
 scala
 
@@ -100,5 +99,5 @@ scala
 5.  scala>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDMyNzkxMzVdfQ==
+eyJoaXN0b3J5IjpbMTA4NjIzNTEzNywtMTU0MzI3OTEzNV19
 -->
