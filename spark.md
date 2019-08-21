@@ -1,5 +1,5 @@
 
-### 关于Spark
+## 1.1 关于Spark
 
 Spark具有如下几个主要特点：  
 * 运行速度快：Spark使用先进的DAG（Directed Acyclic Graph，有向无环图）执行引擎，以支持循环数据流与内存计算，基于内存的执行速度可比Hadoop MapReduce快上百倍，基于磁盘的执行速度也能快十倍；  
@@ -55,7 +55,7 @@ Spark的生态系统主要包含了Spark Core、Spark SQL、Spark Streaming、ML
 
 
 
-## 运行构架
+## 1.2 运行构架
 ### 基本概念
 在具体讲解Spark运行架构之前，需要先了解几个重要的概念：  
 * RDD：是弹性分布式数据集（Resilient Distributed Dataset）的简称，是分布式内存的一个抽象概念，提供了一种高度受限的共享内存模型；  
@@ -95,6 +95,6 @@ Spark的生态系统主要包含了Spark Core、Spark SQL、Spark Streaming、ML
 （3）Executor上有一个BlockManager存储模块，类似于键值存储系统（把内存和磁盘共同作为存储设备），在处理迭代计算任务时，不需要把中间结果写入到HDFS等文件系统，而是直接放在这个存储系统上，后续有需要时就可以直接读取；在交互式查询场景下，也可以把表提前缓存到这个存储系统上，提高读写IO性能；  
 （4）任务采用了数据本地性和推测执行等优化机制。数据本地性是尽量将计算移到数据所在的节点上进行，即“计算向数据靠拢”，因为移动计算比移动数据所占的网络资源要少得多。而且，Spark采用了延时调度机制，可以在更大的程度上实现执行过程优化。比如，拥有数据的节点当前正被其他的任务占用，那么，在这种情况下是否需要将数据移动到其他的空闲节点呢？答案是不一定。因为，如果经过预测发现当前节点结束当前任务的时间要比移动数据的时间还要少，那么，调度就会等待，直到当前节点可用。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwOTk2MTEzMCw2NDM2MDc3MzksNDI1Mj
+eyJoaXN0b3J5IjpbLTg1ODk0MjQxNiw2NDM2MDc3MzksNDI1Mj
 Q0NjQ5LDI2Mjk5NTY3NCwxODY4MTM1OTYxXX0=
 -->
