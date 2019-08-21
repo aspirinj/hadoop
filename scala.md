@@ -44,12 +44,11 @@ println(myStr)
 ```
 
 因为myStr是val变量，因此，一旦初始化以后，就不能再次赋值，所以，下面我们执行的再次赋值操作会报错：
-
+```scala
 myStr =  "Hello Scala!"
 <console>:27: error: reassignment to val
 myStr =  "Hello Scala!"
-
-scala
+```
 
 ## var变量
 
@@ -96,6 +95,6 @@ scala
 5.  scala>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2MjY1MjkxMywtODY1OTg5NDMwLDEwOD
-YyMzUxMzcsLTE1NDMyNzkxMzVdfQ==
+eyJoaXN0b3J5IjpbMzc0NjAwNzU5LDExNjI2NTI5MTMsLTg2NT
+k4OTQzMCwxMDg2MjM1MTM3LC0xNTQzMjc5MTM1XX0=
 -->
