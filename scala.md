@@ -111,17 +111,11 @@ Scala允许对“字面量”直接执行方法，比如：
 
 ## 操作符
 
-在Scala中，可以使用加(+)、减(-) 、乘(*) 、除(/) 、余数（%）等操作符，而且，*这些操作符就是方法*。例如，5 + 3和(5).+(3)是等价的，也就是说：
+在Scala中，可以使用加(+)、减(-) 、乘(*) 、除(/) 、余数（%）等操作符，而且，**这些操作符就是方法**。例如，5 + 3和(5).+(3)是等价的，也就是说：
 
-```
-a 方法 b
+`a 方法 b` == `a.方法(b)`
 
-```
 
-```
-a.方法(b)
-
-```
 
 上面这二者是等价的。前者是后者的简写形式，这里的+是方法名，是Int类中的一个方法。具体代码如下：
 
@@ -144,8 +138,8 @@ scala
 
 此外，也可以使用关系和逻辑操作，比如，大于(>)、小于(<)、大于等于(>=)和小于等于(<=)，会产生Boolean类型的结果。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDc2NjY3NDgyLC0xMzIwNTIzODMyLDE1Nj
-QwMzUwODgsMTk0NzM4OTM2MSwtMTM5NTE4OTU4OCw0MjA1MjY0
-NjgsMzc0NjAwNzU5LDExNjI2NTI5MTMsLTg2NTk4OTQzMCwxMD
-g2MjM1MTM3LC0xNTQzMjc5MTM1XX0=
+eyJoaXN0b3J5IjpbMTI5MTM1ODE5Niw0NzY2Njc0ODIsLTEzMj
+A1MjM4MzIsMTU2NDAzNTA4OCwxOTQ3Mzg5MzYxLC0xMzk1MTg5
+NTg4LDQyMDUyNjQ2OCwzNzQ2MDA3NTksMTE2MjY1MjkxMywtOD
+Y1OTg5NDMwLDEwODYyMzUxMzcsLTE1NDMyNzkxMzVdfQ==
 -->
