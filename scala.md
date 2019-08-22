@@ -172,69 +172,14 @@ res3: scala.collection.immutable.NumericRange[Float]  =  NumericRange(0.5,  1.3,
 
 
 
-在Scala编程中，经常需要用到打印语句。  
 
-```
-print("My name is:")
-print("Ziyu")
-
-```
-
-上述代码执行后，会得到连在一起的一行结果，如下：
-
-```
-My name is Ziyu
-
-```
-
-如果要每次打印后追加一个换行符，实现换行的效果，就要采用println语句，如下：
-
-```
-println("My name is:")
-println("Ziyu")
-
-```
-
-上述代码执行后，会得到两行结果，如下：
-
-```
-My name is
-Ziyu
-
-```
-
-如果要打印整型变量的值，可以使用下面语句：
-
-```
-val i = 7
-println(i)
-
-```
-
-此外，Scala还带有C语言风格的格式化字符串的printf函数：
-
-```
-val i = 5;
-val j = 8;
-printf("My name is %s. I hava %d apples and %d eggs.\n","Ziyu",i,j)
-
-```
-
-上面语句执行后会得到如下结果：
-
-```
-My name is Ziyu. I hava 5 apples and 8 eggs.
-
-```
-
-更多关于printf函数的使用方法，读者可以参考C语言书籍。
 
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1ODI4MzQ1MCwtMTU5MTk2NzM4MCw0Nz
+eyJoaXN0b3J5IjpbMTY2NzMwMTk1NiwtMTU5MTk2NzM4MCw0Nz
 Y2Njc0ODIsLTEzMjA1MjM4MzIsMTU2NDAzNTA4OCwxOTQ3Mzg5
 MzYxLC0xMzk1MTg5NTg4LDQyMDUyNjQ2OCwzNzQ2MDA3NTksMT
 E2MjY1MjkxMywtODY1OTg5NDMwLDEwODYyMzUxMzcsLTE1NDMy
