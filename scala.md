@@ -16,7 +16,7 @@ Scala有两种类型的变量，一种是val，是不可变的，在声明时就
 
 ## val变量
 ```scala
-scala> val myStr =  "Hello World!"
+val myStr =  "Hello World!"
 ```
 `myStr`变量的类型是`String`类型，Scala具有“类型推断”能力，可以自动推断出变量的类型。当然，我们也可以显式声明变量的类型：
 ```scala
@@ -90,7 +90,7 @@ scala
 5.  scala>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxOTM1MDcxOSwtMTM5NTE4OTU4OCw0Mj
+eyJoaXN0b3J5IjpbMTk0NzM4OTM2MSwtMTM5NTE4OTU4OCw0Mj
 A1MjY0NjgsMzc0NjAwNzU5LDExNjI2NTI5MTMsLTg2NTk4OTQz
 MCwxMDg2MjM1MTM3LC0xNTQzMjc5MTM1XX0=
 -->
