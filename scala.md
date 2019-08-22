@@ -21,7 +21,7 @@ myStr:  String  =  Hello  World!
 ```
 `myStr`变量的类型是`String`类型，Scala具有“类型推断”能力，可以自动推断出变量的类型。当然，我们也可以显式声明变量的类型：
 ```scala
-scala> val myStr2 :  String  =  "Hello World!"
+val myStr2 :  String  =  "Hello World!"
 myStr2:  String  =  Hello  World!
 ```
 
@@ -92,7 +92,7 @@ scala
 5.  scala>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDIwNTI2NDY4LDM3NDYwMDc1OSwxMTYyNj
-UyOTEzLC04NjU5ODk0MzAsMTA4NjIzNTEzNywtMTU0MzI3OTEz
-NV19
+eyJoaXN0b3J5IjpbLTEzOTUxODk1ODgsNDIwNTI2NDY4LDM3ND
+YwMDc1OSwxMTYyNjUyOTEzLC04NjU5ODk0MzAsMTA4NjIzNTEz
+NywtMTU0MzI3OTEzNV19
 -->
