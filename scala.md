@@ -93,20 +93,19 @@ Scala的数据类型包括：Byte、Char、Short、Int、Long、Float、Double�
   
 这里要明确什么是“字面量”？字面量包括整数字面量、浮点数字面量、布尔型字面量、字符字面量、字符串字面量、符号字面量、函数字面量和元组字面量。举例如下：
 
-1.  val i =  123  //123就是整数字面量
-2.  val i =  3.14  //3.14就是浮点数字面量
-3.  val i =  true  //true就是布尔型字面量
-4.  val i =  'A'  //'A'就是字符字面量
-5.  val i =  "Hello"  //"Hello"就是字符串字面量
-
-scala
+```scala
+val i =  123  //123就是整数字面量
+val i =  3.14  //3.14就是浮点数字面量
+val i =  true  //true就是布尔型字面量
+val i =  'A'  //'A'就是字符字面量
+val i =  "Hello"  //"Hello"就是字符串字面量
+```
 
 Scala允许对“字面量”直接执行方法，比如：
-
-1.  5.toString()  //产生字符串"5"
-2.  "abc".intersect("bcd")  //输出"bc"
-
-scala
+```scala
+5.toString()  //产生字符串"5"
+"abc".intersect("bcd")  //输出"bc"
+```
 
 上面的intersect()方法用来输出两个字符串中都存在的字符。
 
@@ -145,7 +144,7 @@ scala
 
 此外，也可以使用关系和逻辑操作，比如，大于(>)、小于(<)、大于等于(>=)和小于等于(<=)，会产生Boolean类型的结果。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxMDE1NTUxOCwtMTMyMDUyMzgzMiwxNT
+eyJoaXN0b3J5IjpbLTQ3MzY2NjE2NCwtMTMyMDUyMzgzMiwxNT
 Y0MDM1MDg4LDE5NDczODkzNjEsLTEzOTUxODk1ODgsNDIwNTI2
 NDY4LDM3NDYwMDc1OSwxMTYyNjUyOTEzLC04NjU5ODk0MzAsMT
 A4NjIzNTEzNywtMTU0MzI3OTEzNV19
