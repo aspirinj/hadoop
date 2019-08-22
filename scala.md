@@ -133,9 +133,53 @@ scala> println(i)
 ```
 
 此外，也可以使用关系和逻辑操作，比如，大于(>)、小于(<)、大于等于(>=)和小于等于(<=)，会产生Boolean类型的结果。
+
+
+## Range
+
+在执行for循环时，我们经常会用到数值序列，比如，i的值从1循环到5，这时就可以采用Range来实现。Range可以支持创建不同数据类型的数值序列，包括Int、Long、Float、Double、Char、BigInt和BigDecimal等。  
+  
+在创建Range时，需要给出区间的起点和终点以及步长（默认步长为1）。下面通过几个实例来介绍：  
+（1）创建一个从1到5的数值序列，包含区间终点5，步长为1
+
+1.  scala>  1 to 5
+2.  res0: scala.collection.immutable.Range.Inclusive  =  Range(1,  2,  3,  4,  5)
+
+scala
+
+之前我们已经介绍过，在Scala中允许对“字面量”直接执行方法，所以，上面的代码，也可以用下面的代码来实现：
+
+1.  scala>  1.to(5)
+2.  res0: scala.collection.immutable.Range.Inclusive  =  Range(1,  2,  3,  4,  5)
+
+scala
+
+（2）创建一个从1到5的数值序列，不包含区间终点5，步长为1
+
+1.  scala>  1  until  5
+2.  res1: scala.collection.immutable.Range  =  Range(1,  2,  3,  4)
+
+scala
+
+（3）创建一个从1到10的数值序列，包含区间终点10，步长为2
+
+1.  scala>  1 to 10  by  2
+2.  res2: scala.collection.immutable.Range  =  Range(1,  3,  5,  7,  9)
+
+scala
+
+（4）创建一个Float类型的数值序列，从0.5f到5.9f，步长为0.3f
+
+1.  scala>  0.5f to 5.9f  by  0.8f
+2.  res3: scala.collection.immutable.NumericRange[Float]  =  NumericRange(0.5,  1.3,  2.1,  2.8999999,  3.6999998,  4.5,  5.3)
+
+
+
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTU5MDQ1OTksNDc2NjY3NDgyLC0xMz
-IwNTIzODMyLDE1NjQwMzUwODgsMTk0NzM4OTM2MSwtMTM5NTE4
-OTU4OCw0MjA1MjY0NjgsMzc0NjAwNzU5LDExNjI2NTI5MTMsLT
-g2NTk4OTQzMCwxMDg2MjM1MTM3LC0xNTQzMjc5MTM1XX0=
+eyJoaXN0b3J5IjpbLTEyMTkxMTM3Myw0NzY2Njc0ODIsLTEzMj
+A1MjM4MzIsMTU2NDAzNTA4OCwxOTQ3Mzg5MzYxLC0xMzk1MTg5
+NTg4LDQyMDUyNjQ2OCwzNzQ2MDA3NTksMTE2MjY1MjkxMywtOD
+Y1OTg5NDMwLDEwODYyMzUxMzcsLTE1NDMyNzkxMzVdfQ==
 -->
