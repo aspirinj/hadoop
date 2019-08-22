@@ -185,61 +185,25 @@ scala>  for  (i <-  1 to 5)  out.println(i)
 scala>  out.close()
 ```
 
-上面代码中，new PrintWriter(“output.txt”)中只给出了文件名，并没有给出文件路径，采用相对路径，这时，文件就会被保存到启动Scala REPL时的当前目录下。比如，如果我们是进入“/home/hadoop”用户目录，在这个目录下启动进入了Scala REPL交互式执行环境，则上面代码执行结束后，可以在hadoop用户的工作目录“/home/hadoop/”下找到新生成的这个output.txt文件。为了查看这个文件，我们可以在当前“终端”窗口的基础上，再新建一个终端窗口，你可以在当前终端窗口的左上角看到一个菜单，点击“终端”，选择“新建终端”，就可以打开第二个命令行终端窗口（用来查看文件）。  
-现在，让我们切换到第二个终端窗口，然后，输入下面命令进入到hadoop用户的工作目录，并显示该目录下的所有文件和文件夹信息：
-
-1.  cd ~
-2.  ls
-
-Shell 命令
-
-“~”就表示当前用户的工作目录，对于hadoop用户而言，就是“/home/hadoop/”目录。  
-上面命令执行后，就可以发现，“/home/hadoop/”目录下有个新生成的这个output.txt文件，下面使用cat命令查看该文件内容：
-
-1.  cat output.txt
-
-Shell 命令
-
 需要注意的是，必须要执行out.close()语句，才会看到output.txt文件被生成，如果没有执行out.close()语句，我们就无法看到生成的output.txt文件。  
 如果我们想把文件保存到一个指定的目录下，就需要给出文件路径，代码如下：
 
-1.  scala>  import java.io.PrintWriter
-2.  import java.io.PrintWriter  //这行是Scala解释器执行上面语句后返回的结果
-3.  scala> val out  =  new  PrintWriter("/usr/local/scala/mycode/output.txt")
-4.  out: java.io.PrintWriter  = java.io.PrintWriter@25641d39  //这行是Scala解释器执行上面语句后返回的结果
-5.  scala>  for  (i <-  1 to 5)  out.println(i)
-6.  scala>  out.close()
-
-scala
-
-上述过程执行结束后，就可以到“/usr/local/scala/mycode/”这个目录下找到output.txt文件。
 
 ## 读取文本文件中的行
 
 可以使用Scala.io.Source的getLines方法实现对文件中所有行的读取。  
 仍然假设当前是用hadoop用户登录了Linux系统，并且使用scala命令启动了Scala解释器，现在，我们要把上面刚生成的、在hadoop用户工作目录下的output.txt文件读取出来，下面给出了完整的读取文件实例代码：
 
-1.  scala>  import scala.io.Source
-2.  import scala.io.Source  //这行是Scala解释器执行上面语句后返回的结果
-3.  scala> val inputFile =  Source.fromFile("output.txt")
-4.  inputFile: scala.io.BufferedSource  = non-empty iterator //这行是Scala解释器执行上面语句后返回的结果
-5.  scala> val lines = inputFile.getLines //返回的结果是一个迭代器
-6.  lines:  Iterator[String]  = non-empty iterator //这行是Scala解释器执行上面语句后返回的结果
-7.  scala>  for  (line <- lines) println(line)
-8.  1
-9.  2
-10.  3
-11.  4
-12.  5
+
 
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTgwMTIxODgsMTY2NzMwMTk1NiwtMT
-U5MTk2NzM4MCw0NzY2Njc0ODIsLTEzMjA1MjM4MzIsMTU2NDAz
-NTA4OCwxOTQ3Mzg5MzYxLC0xMzk1MTg5NTg4LDQyMDUyNjQ2OC
-wzNzQ2MDA3NTksMTE2MjY1MjkxMywtODY1OTg5NDMwLDEwODYy
-MzUxMzcsLTE1NDMyNzkxMzVdfQ==
+eyJoaXN0b3J5IjpbOTQ2MTM2NDg1LC0yMTE4MDEyMTg4LDE2Nj
+czMDE5NTYsLTE1OTE5NjczODAsNDc2NjY3NDgyLC0xMzIwNTIz
+ODMyLDE1NjQwMzUwODgsMTk0NzM4OTM2MSwtMTM5NTE4OTU4OC
+w0MjA1MjY0NjgsMzc0NjAwNzU5LDExNjI2NTI5MTMsLTg2NTk4
+OTQzMCwxMDg2MjM1MTM3LC0xNTQzMjc5MTM1XX0=
 -->
