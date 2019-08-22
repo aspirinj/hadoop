@@ -141,11 +141,10 @@ scala> println(i)
   
 在创建Range时，需要给出区间的起点和终点以及步长（默认步长为1）。下面通过几个实例来介绍：  
 （1）创建一个从1到5的数值序列，包含区间终点5，步长为1
-
-1.  scala>  1 to 5
-2.  res0: scala.collection.immutable.Range.Inclusive  =  Range(1,  2,  3,  4,  5)
-
-scala
+```scala
+scala>  1 to 5
+res0: scala.collection.immutable.Range.Inclusive  =  Range(1,  2,  3,  4,  5)
+```
 
 之前我们已经介绍过，在Scala中允许对“字面量”直接执行方法，所以，上面的代码，也可以用下面的代码来实现：
 
@@ -178,8 +177,8 @@ scala
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTkxMTM3Myw0NzY2Njc0ODIsLTEzMj
-A1MjM4MzIsMTU2NDAzNTA4OCwxOTQ3Mzg5MzYxLC0xMzk1MTg5
-NTg4LDQyMDUyNjQ2OCwzNzQ2MDA3NTksMTE2MjY1MjkxMywtOD
-Y1OTg5NDMwLDEwODYyMzUxMzcsLTE1NDMyNzkxMzVdfQ==
+eyJoaXN0b3J5IjpbLTE1OTE5NjczODAsNDc2NjY3NDgyLC0xMz
+IwNTIzODMyLDE1NjQwMzUwODgsMTk0NzM4OTM2MSwtMTM5NTE4
+OTU4OCw0MjA1MjY0NjgsMzc0NjAwNzU5LDExNjI2NTI5MTMsLT
+g2NTk4OTQzMCwxMDg2MjM1MTM3LC0xNTQzMjc5MTM1XX0=
 -->
