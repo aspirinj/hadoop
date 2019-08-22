@@ -171,20 +171,19 @@ res3: scala.collection.immutable.NumericRange[Float]  =  NumericRange(0.5,  1.3,
 ```
 
 
-
-## 写入文本文件
-
+## 读写文件
+### 写入文本文件
 Scala需要使用java.io.PrintWriter实现把数据写入到文本文件。  
 假设当前正使用用户名hadoop登录Linux系统，打开Scala解释器进入命令提示符状态后，输入以下代码:
 
-1.  scala>  import java.io.PrintWriter
-2.  import java.io.PrintWriter  //这行是Scala解释器执行上面语句后返回的结果
-3.  scala> val out  =  new  PrintWriter("output.txt")
-4.  out: java.io.PrintWriter  = java.io.PrintWriter@25641d39  //这行是Scala解释器执行上面语句后返回的结果
-5.  scala>  for  (i <-  1 to 5)  out.println(i)
-6.  scala>  out.close()
-
-scala
+```scala
+scala>  import java.io.PrintWriter
+import java.io.PrintWriter  //这行是Scala解释器执行上面语句后返回的结果
+scala> val out  =  new  PrintWriter("output.txt")
+out: java.io.PrintWriter  = java.io.PrintWriter@25641d39  //这行是Scala解释器执行上面语句后返回的结果
+scala>  for  (i <-  1 to 5)  out.println(i)
+scala>  out.close()
+```
 
 上面代码中，new PrintWriter(“output.txt”)中只给出了文件名，并没有给出文件路径，采用相对路径，这时，文件就会被保存到启动Scala REPL时的当前目录下。比如，如果我们是进入“/home/hadoop”用户目录，在这个目录下启动进入了Scala REPL交互式执行环境，则上面代码执行结束后，可以在hadoop用户的工作目录“/home/hadoop/”下找到新生成的这个output.txt文件。为了查看这个文件，我们可以在当前“终端”窗口的基础上，再新建一个终端窗口，你可以在当前终端窗口的左上角看到一个菜单，点击“终端”，选择“新建终端”，就可以打开第二个命令行终端窗口（用来查看文件）。  
 现在，让我们切换到第二个终端窗口，然后，输入下面命令进入到hadoop用户的工作目录，并显示该目录下的所有文件和文件夹信息：
@@ -238,7 +237,7 @@ scala
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1OTc5NTI2MSwxNjY3MzAxOTU2LC0xNT
+eyJoaXN0b3J5IjpbMjAxMTI5MTk0OCwxNjY3MzAxOTU2LC0xNT
 kxOTY3MzgwLDQ3NjY2NzQ4MiwtMTMyMDUyMzgzMiwxNTY0MDM1
 MDg4LDE5NDczODkzNjEsLTEzOTUxODk1ODgsNDIwNTI2NDY4LD
 M3NDYwMDc1OSwxMTYyNjUyOTEzLC04NjU5ODk0MzAsMTA4NjIz
