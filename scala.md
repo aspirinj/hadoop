@@ -165,16 +165,17 @@ res2: scala.collection.immutable.Range  =  Range(1,  3,  5,  7,  9)
 ```
 
 （4）创建一个Float类型的数值序列，从0.5f到5.9f，步长为0.3f
-```
+```scala
 scala>  0.5f to 5.9f  by  0.8f
-2.  res3: scala.collection.immutable.NumericRange[Float]  =  NumericRange(0.5,  1.3,  2.1,  2.8999999,  3.6999998,  4.5,  5.3)
+res3: scala.collection.immutable.NumericRange[Float]  =  NumericRange(0.5,  1.3,  2.1,  2.8999999,  3.6999998,  4.5,  5.3)
+```
 
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzkxNjYxNjcwLC0xNTkxOTY3MzgwLDQ3Nj
+eyJoaXN0b3J5IjpbOTUwMjQxOTMyLC0xNTkxOTY3MzgwLDQ3Nj
 Y2NzQ4MiwtMTMyMDUyMzgzMiwxNTY0MDM1MDg4LDE5NDczODkz
 NjEsLTEzOTUxODk1ODgsNDIwNTI2NDY4LDM3NDYwMDc1OSwxMT
 YyNjUyOTEzLC04NjU5ODk0MzAsMTA4NjIzNTEzNywtMTU0MzI3
