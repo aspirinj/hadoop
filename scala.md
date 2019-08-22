@@ -65,11 +65,10 @@ myPrice:  Double  =  10.6
 ## 小技巧：如何在Scala解释器中输入多行代码
 
 在Scala解释器中，当在命令提示符后面输入一个表达式并且按回车以后，代码就会被执行并显示出结果，比如下面我们输入一行表达式并回车：
-
-1.  2*9+4
-2.  res1:  Int  =  22
-
-scala
+```scala
+2*9+4
+res1:  Int  =  22
+```
 
 这是输入单行代码的情形，但是，有时候，我们需要在命令提示符后面输入多行代码，这该如何实现呢？怎么才能让Scala解释器意识到你要输入多行代码呢？  
 在Java中，每个语句都是以英文的分号结束，但是，在Scala中，可以不用分号。当然，如果你想把多条语句全部写在一行上面，这时还是需要使用分号来隔开各个语句的。  
@@ -80,15 +79,15 @@ val myStr4 =
 ```
 
 此外，如果我们在命令提示符后面输入“val myStr5 = ”然后就回车，解释器会在下一行显示一个竖线“|”，这时如果我们发现变量名称错误，想放弃本次输入，就可以在“|”后面连续敲入两个回车，结束本次输入，具体如下：
-
-1.  scala> val myStr5 =
-2.    |
-3.    |
-4.  You typed two blank lines.  Starting a new command.
-5.  scala>
+```
+val myStr5 =
+ |
+ |
+You typed two blank lines.  Starting a new command.
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2OTc1NjY3NiwtMTMyMDUyMzgzMiwxNT
+eyJoaXN0b3J5IjpbLTE5MzUwNjUzNCwtMTMyMDUyMzgzMiwxNT
 Y0MDM1MDg4LDE5NDczODkzNjEsLTEzOTUxODk1ODgsNDIwNTI2
 NDY4LDM3NDYwMDc1OSwxMTYyNjUyOTEzLC04NjU5ODk0MzAsMT
 A4NjIzNTEzNywtMTU0MzI3OTEzNV19
