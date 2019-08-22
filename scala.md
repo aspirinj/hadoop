@@ -74,12 +74,10 @@ scala
 这是输入单行代码的情形，但是，有时候，我们需要在命令提示符后面输入多行代码，这该如何实现呢？怎么才能让Scala解释器意识到你要输入多行代码呢？  
 在Java中，每个语句都是以英文的分号结束，但是，在Scala中，可以不用分号。当然，如果你想把多条语句全部写在一行上面，这时还是需要使用分号来隔开各个语句的。  
 通常而言，只要Scala解释器推断出你的代码还没有结束，应该延续到下一行，解释器就会在下一行显示一个竖线“|”，你可以继续输入剩余的代码，比如，我们要输入表达式val myStr4 = “Hello World!”，我们只在命令提示符后面输入“val myStr4 = ”然后就回车，显然，这个表达式还没有结束，所以，解释器会在下一行显示一个竖线“|”，你可以在第2行继续输入”Hello World!”然后回车，解释器就会得到执行结果，具体如下：
-
-1.  scala> val myStr4 =
-2.    |  "Hello World!"
-3.  myStr4:  String  =  Hello  World!
-
-scala
+```scala
+val myStr4 =
+|  "Hello World!"
+```
 
 此外，如果我们在命令提示符后面输入“val myStr5 = ”然后就回车，解释器会在下一行显示一个竖线“|”，这时如果我们发现变量名称错误，想放弃本次输入，就可以在“|”后面连续敲入两个回车，结束本次输入，具体如下：
 
@@ -90,8 +88,8 @@ scala
 5.  scala>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjA1MjM4MzIsMTU2NDAzNTA4OCwxOT
-Q3Mzg5MzYxLC0xMzk1MTg5NTg4LDQyMDUyNjQ2OCwzNzQ2MDA3
-NTksMTE2MjY1MjkxMywtODY1OTg5NDMwLDEwODYyMzUxMzcsLT
-E1NDMyNzkxMzVdfQ==
+eyJoaXN0b3J5IjpbMTY2OTc1NjY3NiwtMTMyMDUyMzgzMiwxNT
+Y0MDM1MDg4LDE5NDczODkzNjEsLTEzOTUxODk1ODgsNDIwNTI2
+NDY4LDM3NDYwMDc1OSwxMTYyNjUyOTEzLC04NjU5ODk0MzAsMT
+A4NjIzNTEzNywtMTU0MzI3OTEzNV19
 -->
