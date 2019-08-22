@@ -106,12 +106,12 @@ Scala允许对“字面量”直接执行方法，比如：
 5.toString()  //产生字符串"5"
 "abc".intersect("bcd")  //输出"bc"
 ```
-
 上面的intersect()方法用来输出两个字符串中都存在的字符。
+
 
 ## 操作符
 
-在Scala中，可以使用加(+)、减(-) 、乘(*) 、除(/) 、余数（%）等操作符，而且，这些操作符就是方法。例如，5 + 3和(5).+(3)是等价的，也就是说：
+在Scala中，可以使用加(+)、减(-) 、乘(*) 、除(/) 、余数（%）等操作符，而且，*这些操作符就是方法*。例如，5 + 3和(5).+(3)是等价的，也就是说：
 
 ```
 a 方法 b
@@ -144,8 +144,8 @@ scala
 
 此外，也可以使用关系和逻辑操作，比如，大于(>)、小于(<)、大于等于(>=)和小于等于(<=)，会产生Boolean类型的结果。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3MzY2NjE2NCwtMTMyMDUyMzgzMiwxNT
-Y0MDM1MDg4LDE5NDczODkzNjEsLTEzOTUxODk1ODgsNDIwNTI2
-NDY4LDM3NDYwMDc1OSwxMTYyNjUyOTEzLC04NjU5ODk0MzAsMT
-A4NjIzNTEzNywtMTU0MzI3OTEzNV19
+eyJoaXN0b3J5IjpbNDc2NjY3NDgyLC0xMzIwNTIzODMyLDE1Nj
+QwMzUwODgsMTk0NzM4OTM2MSwtMTM5NTE4OTU4OCw0MjA1MjY0
+NjgsMzc0NjAwNzU5LDExNjI2NTI5MTMsLTg2NTk4OTQzMCwxMD
+g2MjM1MTM3LC0xNTQzMjc5MTM1XX0=
 -->
