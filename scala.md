@@ -194,16 +194,22 @@ scala>  out.close()
 可以使用Scala.io.Source的getLines方法实现对文件中所有行的读取。  
 仍然假设当前是用hadoop用户登录了Linux系统，并且使用scala命令启动了Scala解释器，现在，我们要把上面刚生成的、在hadoop用户工作目录下的output.txt文件读取出来，下面给出了完整的读取文件实例代码：
 
-
-
-
+```scala
+scala>  import scala.io.Source
+import scala.io.Source  //这行是Scala解释器执行上面语句后返回的结果
+scala> val inputFile =  Source.fromFile("output.txt")
+inputFile: scala.io.BufferedSource  = non-empty iterator //这行是Scala解释器执行上面语句后返回的结果
+scala> val lines = inputFile.getLines //返回的结果是一个迭代器
+lines:  Iterator[String]  = non-empty iterator //这行是Scala解释器执行上面语句后返回的结果
+scala>  for  (line <- lines) println(line)
+```
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQ2MTM2NDg1LC0yMTE4MDEyMTg4LDE2Nj
-czMDE5NTYsLTE1OTE5NjczODAsNDc2NjY3NDgyLC0xMzIwNTIz
-ODMyLDE1NjQwMzUwODgsMTk0NzM4OTM2MSwtMTM5NTE4OTU4OC
-w0MjA1MjY0NjgsMzc0NjAwNzU5LDExNjI2NTI5MTMsLTg2NTk4
-OTQzMCwxMDg2MjM1MTM3LC0xNTQzMjc5MTM1XX0=
+eyJoaXN0b3J5IjpbMTEwMDU2MDAwMSwtMjExODAxMjE4OCwxNj
+Y3MzAxOTU2LC0xNTkxOTY3MzgwLDQ3NjY2NzQ4MiwtMTMyMDUy
+MzgzMiwxNTY0MDM1MDg4LDE5NDczODkzNjEsLTEzOTUxODk1OD
+gsNDIwNTI2NDY4LDM3NDYwMDc1OSwxMTYyNjUyOTEzLC04NjU5
+ODk0MzAsMTA4NjIzNTEzNywtMTU0MzI3OTEzNV19
 -->
