@@ -66,7 +66,7 @@ myPrice:  Double  =  10.6
 
 在Scala解释器中，当在命令提示符后面输入一个表达式并且按回车以后，代码就会被执行并显示出结果，比如下面我们输入一行表达式并回车：
 
-1.  scala>  2*9+4
+1.  2*9+4
 2.  res1:  Int  =  22
 
 scala
@@ -90,8 +90,8 @@ scala
 5.  scala>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2NDAzNTA4OCwxOTQ3Mzg5MzYxLC0xMz
-k1MTg5NTg4LDQyMDUyNjQ2OCwzNzQ2MDA3NTksMTE2MjY1Mjkx
-MywtODY1OTg5NDMwLDEwODYyMzUxMzcsLTE1NDMyNzkxMzVdfQ
-==
+eyJoaXN0b3J5IjpbLTEzMjA1MjM4MzIsMTU2NDAzNTA4OCwxOT
+Q3Mzg5MzYxLC0xMzk1MTg5NTg4LDQyMDUyNjQ2OCwzNzQ2MDA3
+NTksMTE2MjY1MjkxMywtODY1OTg5NDMwLDEwODYyMzUxMzcsLT
+E1NDMyNzkxMzVdfQ==
 -->
