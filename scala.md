@@ -79,15 +79,73 @@ val myStr4 =
 ```
 
 此外，如果我们在命令提示符后面输入“val myStr5 = ”然后就回车，解释器会在下一行显示一个竖线“|”，这时如果我们发现变量名称错误，想放弃本次输入，就可以在“|”后面连续敲入两个回车，结束本次输入，具体如下：
-```
+```scala
 val myStr5 =
  |
  |
 You typed two blank lines.  Starting a new command.
 ```
 
+
+## 基本数据类型
+
+Scala的数据类型包括：Byte、Char、Short、Int、Long、Float、Double和Boolean。和Java不同的是，在Scala中，这些类型都是“类”，并且都是包scala的成员，比如，Int的全名是scala.Int。对于字符串，Scala用java.lang.String类来表示字符串。  
+  
+这里要明确什么是“字面量”？字面量包括整数字面量、浮点数字面量、布尔型字面量、字符字面量、字符串字面量、符号字面量、函数字面量和元组字面量。举例如下：
+
+1.  val i =  123  //123就是整数字面量
+2.  val i =  3.14  //3.14就是浮点数字面量
+3.  val i =  true  //true就是布尔型字面量
+4.  val i =  'A'  //'A'就是字符字面量
+5.  val i =  "Hello"  //"Hello"就是字符串字面量
+
+scala
+
+Scala允许对“字面量”直接执行方法，比如：
+
+1.  5.toString()  //产生字符串"5"
+2.  "abc".intersect("bcd")  //输出"bc"
+
+scala
+
+上面的intersect()方法用来输出两个字符串中都存在的字符。
+
+## 操作符
+
+在Scala中，可以使用加(+)、减(-) 、乘(*) 、除(/) 、余数（%）等操作符，而且，这些操作符就是方法。例如，5 + 3和(5).+(3)是等价的，也就是说：
+
+```
+a 方法 b
+
+```
+
+```
+a.方法(b)
+
+```
+
+上面这二者是等价的。前者是后者的简写形式，这里的+是方法名，是Int类中的一个方法。具体代码如下：
+
+1.  scala> val sum1 =  5  +  3  //实际上调用了 (5).+(3)
+2.  sum1:  Int  =  8
+3.  scala> val sum2 =  (5).+(3)  //可以发现，写成方法调用的形式，和上面得到相同的结果
+4.  sum2:  Int  =  8
+
+scala
+
+需要注意的是，和Java不同，在Scala中并没有提供++和–操作符，当需要递增和递减时，可以采用如下方式表达：
+
+1.  scala>  var i =  5;
+2.  i:  Int  =  5
+3.  scala> i +=  1  //将i递增
+4.  scala> println(i)
+5.  6
+
+scala
+
+此外，也可以使用关系和逻辑操作，比如，大于(>)、小于(<)、大于等于(>=)和小于等于(<=)，会产生Boolean类型的结果。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzUwNjUzNCwtMTMyMDUyMzgzMiwxNT
+eyJoaXN0b3J5IjpbMTAxMDE1NTUxOCwtMTMyMDUyMzgzMiwxNT
 Y0MDM1MDg4LDE5NDczODkzNjEsLTEzOTUxODk1ODgsNDIwNTI2
 NDY4LDM3NDYwMDc1OSwxMTYyNjUyOTEzLC04NjU5ODk0MzAsMT
 A4NjIzNTEzNywtMTU0MzI3OTEzNV19
