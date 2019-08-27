@@ -13,12 +13,11 @@ object  HelloWorld {
 
 object语句定义了一个单例对象：一个有且仅有一个实例的类。object语 句在定义了一个叫HelloWorld的类的同时还定义了一个叫HelloWorld的实例。这个实例在第一次使用的时候会进行实例化。
 
-　　聪明的读者可能会发现main函数并没有使用static修饰符，这是由于静态成员（方法或者变量）在Scala中并不存在。Scala从不定义静态成员，而通过定义单例object取而代之。
+main函数并没有使用static修饰符，这是由于静态成员（方法或者变量）在Scala中并不存在。Scala从不定义静态成员，而通过定义单例object取而代之。
 
 
 ### 2.1 编译实例
-
-　　我们使用Scala编译器“scalac”来编译Scala代码。和大多数编译器一样，scalac 接受源文件名和一些选项作为参数，生成一个或者多个目标文件。scala编译生成的产物就是标准的Java类文件。
+我们使用Scala编译器“scalac”来编译Scala代码。和大多数编译器一样，scalac 接受源文件名和一些选项作为参数，生成一个或者多个目标文件。scala编译生成的产物就是标准的Java类文件。
 
 　　假设我们吧上述代码保存为文件HelloWorld.scala，我们使用下面的命令编译它（大于号“>”表示命令提示符，你不必输入它）
 
@@ -703,6 +702,5 @@ object语句定义了一个单例对象：一个有且仅有一个实例的类�
 
 　　本文简要介绍了Scala语言的一些特性，并且同时展示了若干实例。有兴趣的读者可以继续阅读本文的姊妹篇： 《Scala By Example》，该文覆盖了Scala的更多的高级特性。如果需要还可以去阅读《Scala Language Specification》。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTM0NTQ5ODcsLTE3Mjc4MzEwODFdfQ
-==
+eyJoaXN0b3J5IjpbMTA4MTU2NDY0NiwtMTcyNzgzMTA4MV19
 -->
