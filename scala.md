@@ -183,8 +183,6 @@ for (i <-  1 to 5)  outWriter.println(i)
 outWriter.close()
 ```
 
-需要注意的是，必须要执行out.close()语句，才会看到output.txt文件被生成，如果没有执行out.close()语句，我们就无法看到生成的output.txt文件。  
-如果我们想把文件保存到一个指定的目录下，就需要给出文件路径，代码如下：
 
 
 ## 读取文本文件中的行
@@ -205,10 +203,10 @@ scala>  for  (line <- lines) println(line)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyOTIwNzA0LDE3MDAxOTU2OTYsMTEwMD
-U2MDAwMSwtMjExODAxMjE4OCwxNjY3MzAxOTU2LC0xNTkxOTY3
-MzgwLDQ3NjY2NzQ4MiwtMTMyMDUyMzgzMiwxNTY0MDM1MDg4LD
-E5NDczODkzNjEsLTEzOTUxODk1ODgsNDIwNTI2NDY4LDM3NDYw
-MDc1OSwxMTYyNjUyOTEzLC04NjU5ODk0MzAsMTA4NjIzNTEzNy
-wtMTU0MzI3OTEzNV19
+eyJoaXN0b3J5IjpbMTY2ODU3ODI4LC01MjkyMDcwNCwxNzAwMT
+k1Njk2LDExMDA1NjAwMDEsLTIxMTgwMTIxODgsMTY2NzMwMTk1
+NiwtMTU5MTk2NzM4MCw0NzY2Njc0ODIsLTEzMjA1MjM4MzIsMT
+U2NDAzNTA4OCwxOTQ3Mzg5MzYxLC0xMzk1MTg5NTg4LDQyMDUy
+NjQ2OCwzNzQ2MDA3NTksMTE2MjY1MjkxMywtODY1OTg5NDMwLD
+EwODYyMzUxMzcsLTE1NDMyNzkxMzVdfQ==
 -->
