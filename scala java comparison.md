@@ -16,9 +16,10 @@ object语句定义了一个单例对象：一个有且仅有一个实例的类�
 main函数并没有使用static修饰符，这是由于静态成员（方法或者变量）在Scala中并不存在。Scala从不定义静态成员，而通过定义单例object取而代之。
 
 
-`
-> scala -classpath . HelloWorld
-> `
+```bash
+scalac test.scala
+scala -classpath . HelloWorld
+```
 
 ## 三、Scala与Java交互
 
@@ -681,6 +682,6 @@ main函数并没有使用static修饰符，这是由于静态成员（方法或�
 
 　　本文简要介绍了Scala语言的一些特性，并且同时展示了若干实例。有兴趣的读者可以继续阅读本文的姊妹篇： 《Scala By Example》，该文覆盖了Scala的更多的高级特性。如果需要还可以去阅读《Scala Language Specification》。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA4NTg3ODUsMTA4MTU2NDY0NiwtMTcyNz
-gzMTA4MV19
+eyJoaXN0b3J5IjpbLTc5MDEyNDI1NiwxMDgxNTY0NjQ2LC0xNz
+I3ODMxMDgxXX0=
 -->
