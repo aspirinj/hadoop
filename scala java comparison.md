@@ -16,17 +16,6 @@ object语句定义了一个单例对象：一个有且仅有一个实例的类�
 main函数并没有使用static修饰符，这是由于静态成员（方法或者变量）在Scala中并不存在。Scala从不定义静态成员，而通过定义单例object取而代之。
 
 
-### 2.1 编译实例
-我们使用Scala编译器“scalac”来编译Scala代码。和大多数编译器一样，scalac 接受源文件名和一些选项作为参数，生成一个或者多个目标文件。scala编译生成的产物就是标准的Java类文件。
-
-　　假设我们吧上述代码保存为文件HelloWorld.scala，我们使用下面的命令编译它（大于号“>”表示命令提示符，你不必输入它）
-
-`1`
-
-`> scalac HelloWorld.scala`
-
-　　这将会在当前目录生成一系列.class文件。其中的一个名为HelloWorld.class 的文件中定义了一个可以直接使用scala命令执行的类。下文中你可以看到这个例子。
-
 ### 2.2 运行实例
 
 　　一旦完成编译，Scala程序就可以使用scala命令执行了。scala的用法和java很相似，并且连选项也大致相同。上面的例子就可以使用下面的命令运行，这将会产生我们所期望的输出。
@@ -702,5 +691,6 @@ main函数并没有使用static修饰符，这是由于静态成员（方法或�
 
 　　本文简要介绍了Scala语言的一些特性，并且同时展示了若干实例。有兴趣的读者可以继续阅读本文的姊妹篇： 《Scala By Example》，该文覆盖了Scala的更多的高级特性。如果需要还可以去阅读《Scala Language Specification》。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4MTU2NDY0NiwtMTcyNzgzMTA4MV19
+eyJoaXN0b3J5IjpbMjQ3MjY5NTgyLDEwODE1NjQ2NDYsLTE3Mj
+c4MzEwODFdfQ==
 -->
