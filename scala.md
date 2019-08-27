@@ -191,11 +191,9 @@ outWriter.close()
 仍然假设当前是用hadoop用户登录了Linux系统，并且使用scala命令启动了Scala解释器，现在，我们要把上面刚生成的、在hadoop用户工作目录下的output.txt文件读取出来，下面给出了完整的读取文件实例代码：
 
 ```scala
-scala>  import scala.io.Source
-import scala.io.Source  //这行是Scala解释器执行上面语句后返回的结果
-scala> val inputFile =  Source.fromFile("output.txt")
-inputFile: scala.io.BufferedSource  = non-empty iterator //这行是Scala解释器执行上面语句后返回的结果
-scala> val lines = inputFile.getLines //返回的结果是一个迭代器
+import scala.io.Source
+val inputFile =  Source.fromFile("output.txt")
+val lines = inputFile.getLines //返回的结果是一个迭代器
 lines:  Iterator[String]  = non-empty iterator //这行是Scala解释器执行上面语句后返回的结果
 scala>  for  (line <- lines) println(line)
 ```
@@ -203,10 +201,10 @@ scala>  for  (line <- lines) println(line)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2ODU3ODI4LC01MjkyMDcwNCwxNzAwMT
-k1Njk2LDExMDA1NjAwMDEsLTIxMTgwMTIxODgsMTY2NzMwMTk1
-NiwtMTU5MTk2NzM4MCw0NzY2Njc0ODIsLTEzMjA1MjM4MzIsMT
-U2NDAzNTA4OCwxOTQ3Mzg5MzYxLC0xMzk1MTg5NTg4LDQyMDUy
-NjQ2OCwzNzQ2MDA3NTksMTE2MjY1MjkxMywtODY1OTg5NDMwLD
-EwODYyMzUxMzcsLTE1NDMyNzkxMzVdfQ==
+eyJoaXN0b3J5IjpbMTAyNjI2MjgyMCwxNjY4NTc4MjgsLTUyOT
+IwNzA0LDE3MDAxOTU2OTYsMTEwMDU2MDAwMSwtMjExODAxMjE4
+OCwxNjY3MzAxOTU2LC0xNTkxOTY3MzgwLDQ3NjY2NzQ4MiwtMT
+MyMDUyMzgzMiwxNTY0MDM1MDg4LDE5NDczODkzNjEsLTEzOTUx
+ODk1ODgsNDIwNTI2NDY4LDM3NDYwMDc1OSwxMTYyNjUyOTEzLC
+04NjU5ODk0MzAsMTA4NjIzNTEzNywtMTU0MzI3OTEzNV19
 -->
