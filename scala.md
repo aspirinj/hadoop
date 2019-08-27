@@ -177,12 +177,10 @@ Scala需要使用java.io.PrintWriter实现把数据写入到文本文件。
 假设当前正使用用户名hadoop登录Linux系统，打开Scala解释器进入命令提示符状态后，输入以下代码:
 
 ```scala
-scala> import java.io.PrintWriter
-
-scala> val out  =  new  PrintWriter("output.txt")
-out: java.io.PrintWriter  = java.io.PrintWriter@25641d39  //这行是Scala解释器执行上面语句后返回的结果
-scala>  for  (i <-  1 to 5)  out.println(i)
-scala>  out.close()
+import java.io.PrintWriter
+val outWriter  =  new  PrintWriter("output.txt")
+for (i <-  1 to 5)  outWriter.println(i)
+outWriter.close()
 ```
 
 需要注意的是，必须要执行out.close()语句，才会看到output.txt文件被生成，如果没有执行out.close()语句，我们就无法看到生成的output.txt文件。  
@@ -207,10 +205,10 @@ scala>  for  (line <- lines) println(line)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjcxMzU4NjUsMTcwMDE5NTY5NiwxMT
-AwNTYwMDAxLC0yMTE4MDEyMTg4LDE2NjczMDE5NTYsLTE1OTE5
-NjczODAsNDc2NjY3NDgyLC0xMzIwNTIzODMyLDE1NjQwMzUwOD
-gsMTk0NzM4OTM2MSwtMTM5NTE4OTU4OCw0MjA1MjY0NjgsMzc0
-NjAwNzU5LDExNjI2NTI5MTMsLTg2NTk4OTQzMCwxMDg2MjM1MT
-M3LC0xNTQzMjc5MTM1XX0=
+eyJoaXN0b3J5IjpbLTUyOTIwNzA0LDE3MDAxOTU2OTYsMTEwMD
+U2MDAwMSwtMjExODAxMjE4OCwxNjY3MzAxOTU2LC0xNTkxOTY3
+MzgwLDQ3NjY2NzQ4MiwtMTMyMDUyMzgzMiwxNTY0MDM1MDg4LD
+E5NDczODkzNjEsLTEzOTUxODk1ODgsNDIwNTI2NDY4LDM3NDYw
+MDc1OSwxMTYyNjUyOTEzLC04NjU5ODk0MzAsMTA4NjIzNTEzNy
+wtMTU0MzI3OTEzNV19
 -->
