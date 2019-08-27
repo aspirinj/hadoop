@@ -1,35 +1,9 @@
-## 为Java程序员编写的Scala的入门教程
-文章标题：[《为Java程序员编写的Scala的入门教程》](http://www.iteblog.com/archives/1040)  
-本文链接：[http://www.iteblog.com/archives/1325](http://www.iteblog.com/archives/1325)  
-  
+## 
 
-## 一、简介
+原文链接：[http://www.iteblog.com/archives/1325](http://www.iteblog.com/archives/1325)  为Java程序员编写的Scala的入门教程
 
-　　本文仅在对[Scala](http://www.iteblog.com/archives/tag/scala)语言和其编译器进行简要介绍。本文的目的读者是那些已经具有一定编程经验，而想尝试一下[Scala](http://www.iteblog.com/archives/tag/scala)语言的人们。要阅读本文，你应当具有基础的面向对象编程的概念，尤其是Java语言的。
 
-## 二、 第一个Scala例子
 
-　　作为学习Scala的第一步，我们将首先写一个标准的HelloWorld，这个虽然不是很有趣，但是它可以让你对Scala有一个最直观的认识而不需要太多关于这个语言的知识。我们的Hello world看起来像这样：
-
-`1`
-
-`object` `HelloWorld {`
-
-`2`
-
-`def` `main(args``:` `Array[String]) {`
-
-`3`
-
-`println(``"Hello, world!"``)`
-
-`4`
-
-`}`
-
-`5`
-
-`}`
 
 　　程序的结构对Java程序员来说可能很令人怀念：它由一个main函数来接受命令行参数，也就是一个String数组。这个函数的唯一一行代码把我 们的问候语传递给了一个叫println的预定义函数。main函数不返回值（所以它是一个procedure method）。所以，也不需要声明返回类型。
 
@@ -724,5 +698,5 @@
 
 　　本文简要介绍了Scala语言的一些特性，并且同时展示了若干实例。有兴趣的读者可以继续阅读本文的姊妹篇： 《Scala By Example》，该文覆盖了Scala的更多的高级特性。如果需要还可以去阅读《Scala Language Specification》。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5MTQwODM5OF19
+eyJoaXN0b3J5IjpbLTE3Mjc4MzEwODFdfQ==
 -->
