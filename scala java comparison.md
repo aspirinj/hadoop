@@ -21,11 +21,9 @@ scalac test.scala
 scala -classpath . HelloWorld
 ```
 
-## 三、Scala与Java交互
+### Scala与Java交互
 
-　　Scala的一个强项在于可以很简单的于已有的Java代码交互，所有java.lang中的类都已经被自动导入了，而其他的类需要显式声明导入。
-
-　　来看看演示代码吧。我们希望对日期进行格式化处理，比如说用法国的格式。
+Scala的一个强项在于可以很简单的于已有的Java代码交互，所有java.lang中的类都已经被自动导入了，而其他的类需要显式声明导入。
 
 　　Java类库定义了一系列很有用的类，比如Date和DateFormat。由于Scala于Java能够进行很好的交互，我们不需要在Scala类库中实现等效的代码，而只需直接吧Java的相关类导入就可以了：
 
@@ -682,6 +680,6 @@ scala -classpath . HelloWorld
 
 　　本文简要介绍了Scala语言的一些特性，并且同时展示了若干实例。有兴趣的读者可以继续阅读本文的姊妹篇： 《Scala By Example》，该文覆盖了Scala的更多的高级特性。如果需要还可以去阅读《Scala Language Specification》。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5MDEyNDI1NiwxMDgxNTY0NjQ2LC0xNz
+eyJoaXN0b3J5IjpbMTQwNjg3NDEwNywxMDgxNTY0NjQ2LC0xNz
 I3ODMxMDgxXX0=
 -->
