@@ -197,12 +197,37 @@ for  (line <- lines) println(line)
 ```
 
 
+## 控制
+### if
+
+请在Linux系统中进入到/usr/local/scala目录，并在之前已经创建好的mycode目录下新建test.scala，用于测试我们撰写的代码。  
+
+1.  cd /usr/local/scala
+2.  vim ./mycode/test.scala
+
+Shell 命令
+
+请在test.scala文件中输入以下代码。
+
+```
+val x = 6
+if (x>0) {println("This is a positive number")
+} else {
+    println("This is not a positive number")
+}
+
+```
+
+保存test.scala文件，然后，使用下面命令执行代码（再次注意，当前工作目录是/usr/local/scala）：
+
+1.  scala ./mycode/test.scala
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxNDM5NjcxLDE2Njg1NzgyOCwtNTI5Mj
-A3MDQsMTcwMDE5NTY5NiwxMTAwNTYwMDAxLC0yMTE4MDEyMTg4
-LDE2NjczMDE5NTYsLTE1OTE5NjczODAsNDc2NjY3NDgyLC0xMz
-IwNTIzODMyLDE1NjQwMzUwODgsMTk0NzM4OTM2MSwtMTM5NTE4
-OTU4OCw0MjA1MjY0NjgsMzc0NjAwNzU5LDExNjI2NTI5MTMsLT
-g2NTk4OTQzMCwxMDg2MjM1MTM3LC0xNTQzMjc5MTM1XX0=
+eyJoaXN0b3J5IjpbLTg0Njk3NTY5NywtODE0Mzk2NzEsMTY2OD
+U3ODI4LC01MjkyMDcwNCwxNzAwMTk1Njk2LDExMDA1NjAwMDEs
+LTIxMTgwMTIxODgsMTY2NzMwMTk1NiwtMTU5MTk2NzM4MCw0Nz
+Y2Njc0ODIsLTEzMjA1MjM4MzIsMTU2NDAzNTA4OCwxOTQ3Mzg5
+MzYxLC0xMzk1MTg5NTg4LDQyMDUyNjQ2OCwzNzQ2MDA3NTksMT
+E2MjY1MjkxMywtODY1OTg5NDMwLDEwODYyMzUxMzcsLTE1NDMy
+NzkxMzVdfQ==
 -->
