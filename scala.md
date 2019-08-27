@@ -178,7 +178,7 @@ Scala需要使用java.io.PrintWriter实现把数据写入到文本文件。
 
 ```scala
 scala> import java.io.PrintWriter
-import java.io.PrintWriter  //这行是Scala解释器执行上面语句后返回的结果
+import java.io.PrintWriter
 scala> val out  =  new  PrintWriter("output.txt")
 out: java.io.PrintWriter  = java.io.PrintWriter@25641d39  //这行是Scala解释器执行上面语句后返回的结果
 scala>  for  (i <-  1 to 5)  out.println(i)
@@ -207,9 +207,10 @@ scala>  for  (line <- lines) println(line)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwMDU2MDAwMSwtMjExODAxMjE4OCwxNj
-Y3MzAxOTU2LC0xNTkxOTY3MzgwLDQ3NjY2NzQ4MiwtMTMyMDUy
-MzgzMiwxNTY0MDM1MDg4LDE5NDczODkzNjEsLTEzOTUxODk1OD
-gsNDIwNTI2NDY4LDM3NDYwMDc1OSwxMTYyNjUyOTEzLC04NjU5
-ODk0MzAsMTA4NjIzNTEzNywtMTU0MzI3OTEzNV19
+eyJoaXN0b3J5IjpbMTcwMDE5NTY5NiwxMTAwNTYwMDAxLC0yMT
+E4MDEyMTg4LDE2NjczMDE5NTYsLTE1OTE5NjczODAsNDc2NjY3
+NDgyLC0xMzIwNTIzODMyLDE1NjQwMzUwODgsMTk0NzM4OTM2MS
+wtMTM5NTE4OTU4OCw0MjA1MjY0NjgsMzc0NjAwNzU5LDExNjI2
+NTI5MTMsLTg2NTk4OTQzMCwxMDg2MjM1MTM3LC0xNTQzMjc5MT
+M1XX0=
 -->
