@@ -194,17 +194,17 @@ outWriter.close()
 import scala.io.Source
 val inputFile =  Source.fromFile("output.txt")
 val lines = inputFile.getLines //返回的结果是一个迭代器
-lines:  Iterator[String]  = non-empty iterator //这行是Scala解释器执行上面语句后返回的结果
-scala>  for  (line <- lines) println(line)
+for  (line <- lines) println(line)
 ```
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyNjI2MjgyMCwxNjY4NTc4MjgsLTUyOT
-IwNzA0LDE3MDAxOTU2OTYsMTEwMDU2MDAwMSwtMjExODAxMjE4
-OCwxNjY3MzAxOTU2LC0xNTkxOTY3MzgwLDQ3NjY2NzQ4MiwtMT
-MyMDUyMzgzMiwxNTY0MDM1MDg4LDE5NDczODkzNjEsLTEzOTUx
-ODk1ODgsNDIwNTI2NDY4LDM3NDYwMDc1OSwxMTYyNjUyOTEzLC
-04NjU5ODk0MzAsMTA4NjIzNTEzNywtMTU0MzI3OTEzNV19
+eyJoaXN0b3J5IjpbLTE1NzI2NTQ1NjUsMTY2ODU3ODI4LC01Mj
+kyMDcwNCwxNzAwMTk1Njk2LDExMDA1NjAwMDEsLTIxMTgwMTIx
+ODgsMTY2NzMwMTk1NiwtMTU5MTk2NzM4MCw0NzY2Njc0ODIsLT
+EzMjA1MjM4MzIsMTU2NDAzNTA4OCwxOTQ3Mzg5MzYxLC0xMzk1
+MTg5NTg4LDQyMDUyNjQ2OCwzNzQ2MDA3NTksMTE2MjY1MjkxMy
+wtODY1OTg5NDMwLDEwODYyMzUxMzcsLTE1NDMyNzkxMzVdfQ==
+
 -->
