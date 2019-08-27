@@ -1,27 +1,7 @@
-# 为Java程序员编写的Scala的入门教程
-
-2015年05月21日 15:21:10 [cq1982](https://me.csdn.net/cq1982) 阅读数 3121更多
-
-分类专栏： [spark&scala](https://blog.csdn.net/cq1982/article/category/3253945)
-
-作者:[过往记忆](http://www.iteblog.com/sample-page) | 新浪微博：[左手牵右手TEL](http://weibo.com/w397090770) | 可以转载, 但必须以超链接形式标明文章原始出处和作者信息及版权声明 推酷网禁止转载本博客文章  
-博客地址：[http://www.iteblog.com/](http://www.iteblog.com/)  
+## 为Java程序员编写的Scala的入门教程
 文章标题：[《为Java程序员编写的Scala的入门教程》](http://www.iteblog.com/archives/1040)  
 本文链接：[http://www.iteblog.com/archives/1325](http://www.iteblog.com/archives/1325)  
-
   
-
-本文是《A [Scala](http://www.iteblog.com/archives/tag/scala) Tutorial for Java programmers》英文的翻译，英文版地址[A Scala Tutorial for Java programmers](http://docs.scala-lang.org/tutorials/scala-for-java-programmers.html)。是Michel Schinz和Philipp Haller编写，由Bearice成中文，dongfengyee(东风雨)整理.
-
-> [一、简介](http://www.iteblog.com/archives/1325#one)  
-> [二、 第一个Scala例子](http://www.iteblog.com/archives/1325#two)  
-> [三、Scala与Java交互](http://www.iteblog.com/archives/1325#three)  
-> [四、Scala：万物皆对象](http://www.iteblog.com/archives/1325#four)  
-> [五、Scala类](http://www.iteblog.com/archives/1325#five)  
-> [六、Scala的模式匹配和条件类](http://www.iteblog.com/archives/1325#six)  
-> [七、Scala Trait](http://www.iteblog.com/archives/1325#seven)  
-> [八、Scala的泛型](http://www.iteblog.com/archives/1325#eight)  
-> [九、结语](http://www.iteblog.com/archives/1325#nine)
 
 ## 一、简介
 
@@ -744,5 +724,5 @@
 
 　　本文简要介绍了Scala语言的一些特性，并且同时展示了若干实例。有兴趣的读者可以继续阅读本文的姊妹篇： 《Scala By Example》，该文覆盖了Scala的更多的高级特性。如果需要还可以去阅读《Scala Language Specification》。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjcxOTIyNDcyXX0=
+eyJoaXN0b3J5IjpbLTQ5MTQwODM5OF19
 -->
