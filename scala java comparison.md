@@ -25,47 +25,8 @@ scala -classpath . HelloWorld
 
 Scala的一个强项在于可以很简单的于已有的Java代码交互，所有java.lang中的类都已经被自动导入了，而其他的类需要显式声明导入。
 
-　　Java类库定义了一系列很有用的类，比如Date和DateFormat。由于Scala于Java能够进行很好的交互，我们不需要在Scala类库中实现等效的代码，而只需直接吧Java的相关类导入就可以了：
+Java类库定义了一系列很有用的类，比如Date和DateFormat。由于Scala于Java能够进行很好的交互，我们不需要在Scala类库中实现等效的代码，而只需直接吧Java的相关类导入就可以了：
 
-`01`
-
-`import` `java.util.{Date, Locale}`
-
-`02`
-
-`import` `java.text.DateFormat`
-
-`03`
-
-`import` `java.text.DateFormat._`
-
-`04`
-
-`object FrenchDate {`
-
-`05`
-
-`def main(args: Array[String]) {`
-
-`06`
-
-`val now =` `new` `Date`
-
-`07`
-
-`val df = getDateInstance(LONG, Locale.FRANCE)`
-
-`08`
-
-`println(df format now)`
-
-`09`
-
-`}`
-
-`10`
-
-`}`
 
 　　Scala的import语句看上去与Java的非常相似，但是它更加强大。你可以使用大括号来导入同一个包里的多个类，就像上面代码中第一行所做的那样。另一个不同点是当导入一个包中所有的类或者符号时，你应该使用下划线（_）而不是星号（*）。这是由于星号在Scala中是一个有效的标识符（例如作为方法名称）。这个例子我们稍后会遇到。
 
@@ -680,6 +641,6 @@ Scala的一个强项在于可以很简单的于已有的Java代码交互，所�
 
 　　本文简要介绍了Scala语言的一些特性，并且同时展示了若干实例。有兴趣的读者可以继续阅读本文的姊妹篇： 《Scala By Example》，该文覆盖了Scala的更多的高级特性。如果需要还可以去阅读《Scala Language Specification》。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwNjg3NDEwNywxMDgxNTY0NjQ2LC0xNz
-I3ODMxMDgxXX0=
+eyJoaXN0b3J5IjpbNzUwNTM3MzI2LDE0MDY4NzQxMDcsMTA4MT
+U2NDY0NiwtMTcyNzgzMTA4MV19
 -->
