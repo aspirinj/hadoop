@@ -1,15 +1,20 @@
 ## 
-
 原文链接：[http://www.iteblog.com/archives/1325](http://www.iteblog.com/archives/1325)  为Java程序员编写的Scala的入门教程
 
-
-
+```scala
+object  HelloWorld {
+	def  main(args: Array[String]) {
+		println("Hello, world!")
+	}
+}
+```
 
 　　程序的结构对Java程序员来说可能很令人怀念：它由一个main函数来接受命令行参数，也就是一个String数组。这个函数的唯一一行代码把我 们的问候语传递给了一个叫println的预定义函数。main函数不返回值（所以它是一个procedure method）。所以，也不需要声明返回类型。
 
 　　对于Java程序员比较陌生的是包含了main函数的object语句。这样的语句定义了一个单例对象：一个有且仅有一个实例的类。object语 句在定义了一个叫HelloWorld的类的同时还定义了一个叫HelloWorld的实例。这个实例在第一次使用的时候会进行实例化。
 
 　　聪明的读者可能会发现main函数并没有使用static修饰符，这是由于静态成员（方法或者变量）在Scala中并不存在。Scala从不定义静态成员，而通过定义单例object取而代之。
+
 
 ### 2.1 编译实例
 
@@ -698,5 +703,5 @@
 
 　　本文简要介绍了Scala语言的一些特性，并且同时展示了若干实例。有兴趣的读者可以继续阅读本文的姊妹篇： 《Scala By Example》，该文覆盖了Scala的更多的高级特性。如果需要还可以去阅读《Scala Language Specification》。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Mjc4MzEwODFdfQ==
+eyJoaXN0b3J5IjpbMTk2Njc2Nzc2OSwtMTcyNzgzMTA4MV19
 -->
