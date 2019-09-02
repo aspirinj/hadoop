@@ -11,7 +11,10 @@ DataInputStream dis = new DataInputStream(new FileInputStream("a.txt"));
 	System.out.println(dis.readUTF());
 	dis.close();
 ```
+
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODkzMDU4MzMsMTc0NTg2MTQ3MywtMT
-Q5NDEwNjE5OF19
+eyJoaXN0b3J5IjpbLTg4MTY0ODE1OSwxNzQ1ODYxNDczLC0xND
+k0MTA2MTk4XX0=
 -->
