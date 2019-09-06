@@ -29,8 +29,28 @@ Here, we call `flatMap` to transform a Dataset of lines to a Dataset of words, a
 scala> wordCounts.collect()
 res6: Array[(String, Int)] = Array((means,1), (under,2), (this,3), (Because,1), (Python,2), (agree,1), (cluster.,1), ...)
 ```
+
+
+### Caching
+Spark also supports pulling data sets into a cluster-wide in-memory cache. This is very useful when data is accessed repeatedly, such as when querying a small “hot” dataset or when running an iterative algorithm like PageRank. As a simple example, let’s mark our `linesWithSpark` dataset to be cached:
+
+-   [**Scala**](https://spark.apache.org/docs/latest/quick-start.html#tab_scala_2)
+-   [**Python**](https://spark.apache.org/docs/latest/quick-start.html#tab_python_2)
+
+```scala
+scala> linesWithSpark.cache()
+res7: linesWithSpark.type = [value: string]
+
+scala> linesWithSpark.count()
+res8: Long = 15
+
+scala> linesWithSpark.count()
+res9: Long = 15
+```
+
+It may seem silly to use Spark to explore and cache a 100-line text file. The interesting part is that these same functions can be used on very large data sets, even when they are striped across tens or hundreds of nodes. You can also do this interactively by connecting `bin/spark-shell` to a cluster, as described in the [RDD programming guide](https://spark.apache.org/docs/latest/rdd-programming-guide.html#using-the-shell).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwMDA5NzA2MCw5OTI0MDAxODYsMTIzOD
-IxNTM0NiwyMDcxNjM5ODU1LDc0MDE4MTY2MywxMDM0NDU4MjAy
-LC05ODEzMTM2NjBdfQ==
+eyJoaXN0b3J5IjpbOTUwODkyNjcxLDE4MDAwOTcwNjAsOTkyND
+AwMTg2LDEyMzgyMTUzNDYsMjA3MTYzOTg1NSw3NDAxODE2NjMs
+MTAzNDQ1ODIwMiwtOTgxMzEzNjYwXX0=
 -->
