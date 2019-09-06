@@ -45,8 +45,74 @@ scala> linesWithSpark.count()
 res9: Long = 15
 ```
 
+
+### Self-Contained Applications
+Suppose we wish to write a self-contained application using the Spark API. We will walk through a simple application in Scala (with sbt), Java (with Maven), and Python (pip).
+
+We’ll create a very simple Spark application in Scala–so simple, in fact, that it’s named `SimpleApp.scala`:
+
+```scala
+/* SimpleApp.scala */
+import org.apache.spark.sql.SparkSession
+
+object SimpleApp {
+  def main(args: Array[String]) {
+    val logFile = "YOUR_SPARK_HOME/README.md" // Should be some file on your system
+    val spark = SparkSession.builder.appName("Simple Application").getOrCreate()
+    val logData = spark.read.textFile(logFile).cache()
+    val numAs = logData.filter(line => line.contains("a")).count()
+    val numBs = logData.filter(line => line.contains("b")).count()
+    println(s"Lines with a: $numAs, Lines with b: $numBs")
+    spark.stop()
+  }
+}
+```
+
+Note that applications should define a `main()` method instead of extending `scala.App`. Subclasses of `scala.App` may not work correctly.
+
+This program just counts the number of lines containing ‘a’ and the number containing ‘b’ in the Spark README. Note that you’ll need to replace YOUR_SPARK_HOME with the location where Spark is installed. Unlike the earlier examples with the Spark shell, which initializes its own SparkSession, we initialize a SparkSession as part of the program.
+
+We call `SparkSession.builder` to construct a [[SparkSession]], then set the application name, and finally call `getOrCreate` to get the [[SparkSession]] instance.
+
+Our application depends on the Spark API, so we’ll also include an sbt configuration file, `build.sbt`, which explains that Spark is a dependency. This file also adds a repository that Spark depends on:
+
+```scala
+name := "Simple Project"
+
+version := "1.0"
+
+scalaVersion := "2.12.8"
+
+libraryDependencies += "org.apache.spark" %% "spark-sql" % "2.4.4"
+```
+
+For sbt to work correctly, we’ll need to layout `SimpleApp.scala` and `build.sbt` according to the typical directory structure. Once that is in place, we can create a JAR package containing the application’s code, then use the `spark-submit` script to run our program.
+
+```bash
+# Your directory layout should look like this
+$ find .
+.
+./build.sbt
+./src
+./src/main
+./src/main/scala
+./src/main/scala/SimpleApp.scala
+
+# Package a jar containing your application
+$ sbt package
+...
+[info] Packaging {..}/{..}/target/scala-2.12/simple-project_2.12-1.0.jar
+
+# Use spark-submit to run your application
+$ YOUR_SPARK_HOME/bin/spark-submit \
+  --class "SimpleApp" \
+  --master local[4] \
+  target/scala-2.12/simple-project_2.12-1.0.jar
+...
+Lines with a: 46, Lines with b: 23
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI5NDc3NzE5LDE4MDAwOTcwNjAsOTkyND
-AwMTg2LDEyMzgyMTUzNDYsMjA3MTYzOTg1NSw3NDAxODE2NjMs
-MTAzNDQ1ODIwMiwtOTgxMzEzNjYwXX0=
+eyJoaXN0b3J5IjpbLTM0MzUxNjIyMywxODAwMDk3MDYwLDk5Mj
+QwMDE4NiwxMjM4MjE1MzQ2LDIwNzE2Mzk4NTUsNzQwMTgxNjYz
+LDEwMzQ0NTgyMDIsLTk4MTMxMzY2MF19
 -->
