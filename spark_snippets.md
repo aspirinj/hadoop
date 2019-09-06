@@ -1,10 +1,13 @@
 
 
 ```scala
-val textFile = spark.read.textFile("a.txt")
+val a = spark.read.textFile("a.txt")
+a.count()
+a.first()
+
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTMyMTc3MzddfQ==
+eyJoaXN0b3J5IjpbLTk4MTMxMzY2MF19
 -->
