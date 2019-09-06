@@ -7,10 +7,12 @@ a.first()  // first row content
 val lines = a.filter(line => line.contains("Spark"))  // rows contains keywords
 a.filter(line => line.contains("Spark")).count()  // row contains keywords count
 a.map(line => line.split(" ").size).reduce((a,b) => if (a>b) a else b)
+a.map(line => line.split(" ").size).reduce((a,b) => Math.max(a,b)
 ```
 
+This first maps a line to an integer value, creating a new Dataset. `reduce` is called on that Dataset to find the largest word count. The arguments to `map` and `reduce` are Scala function literals (closures), and can use any language feature or Scala/Java library. For example, we can easily call functions declared elsewhere. 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3MTYzOTg1NSw3NDAxODE2NjMsMTAzND
-Q1ODIwMiwtOTgxMzEzNjYwXX0=
+eyJoaXN0b3J5IjpbMjA2ODM5MjI5LDIwNzE2Mzk4NTUsNzQwMT
+gxNjYzLDEwMzQ0NTgyMDIsLTk4MTMxMzY2MF19
 -->
