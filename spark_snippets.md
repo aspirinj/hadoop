@@ -45,9 +45,8 @@ scala> linesWithSpark.count()
 res9: Long = 15
 ```
 
-It may seem silly to use Spark to explore and cache a 100-line text file. The interesting part is that these same functions can be used on very large data sets, even when they are striped across tens or hundreds of nodes. You can also do this interactively by connecting `bin/spark-shell` to a cluster.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzg1NDU4NDE1LDE4MDAwOTcwNjAsOTkyND
+eyJoaXN0b3J5IjpbODI5NDc3NzE5LDE4MDAwOTcwNjAsOTkyND
 AwMTg2LDEyMzgyMTUzNDYsMjA3MTYzOTg1NSw3NDAxODE2NjMs
 MTAzNDQ1ODIwMiwtOTgxMzEzNjYwXX0=
 -->
