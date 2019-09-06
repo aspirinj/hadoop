@@ -1,9 +1,10 @@
 ## Check existence
 ```bash
 if [ -z  "${SPARK_HOME}" ];  then
-xxxxxxxxxx
+xxx
 fi
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1MDU1MTYxOCwxNTAxOTYyNzY0XX0=
+eyJoaXN0b3J5IjpbMzI0MzI3NTQ0LDEzNTA1NTE2MTgsMTUwMT
+k2Mjc2NF19
 -->
