@@ -23,7 +23,6 @@ This first maps a line to an integer value, creating a new Dataset. `reduce` is 
 ```scala
 scala> val wordCounts = a.flatMap(line => line.split(" ")).groupByKey(identity).count()
 ```
-
 Here, we call `flatMap` to transform a Dataset of lines to a Dataset of words, and then combine `groupByKey` and `count` to compute the per-word counts in the file as a Dataset of (String, Long) pairs. To collect the word counts in our shell, we can call `collect`:
 
 ```scala
@@ -31,7 +30,7 @@ scala> wordCounts.collect()
 res6: Array[(String, Int)] = Array((means,1), (under,2), (this,3), (Because,1), (Python,2), (agree,1), (cluster.,1), ...)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxMDU4NDc4Niw5OTI0MDAxODYsMTIzOD
+eyJoaXN0b3J5IjpbMTgwMDA5NzA2MCw5OTI0MDAxODYsMTIzOD
 IxNTM0NiwyMDcxNjM5ODU1LDc0MDE4MTY2MywxMDM0NDU4MjAy
 LC05ODEzMTM2NjBdfQ==
 -->
