@@ -1,3 +1,20 @@
+### Sample
+```scala
+import org.apache.spark.{SparkConf, SparkContext}  
+  
+object Test1 {  
+  def main(args: Array[String]): Unit = {  
+    val conf = new SparkConf().setAppName("Simple Spark").setMaster("local[2]")  
+    val sc = new SparkContext(conf)  
+    val rdd1 = sc.parallelize(List(1,2,3,4,5,6,7))  
+    rdd1.saveAsTextFile("output")  
+    sc.stop()  
+  }  
+}
+```
+
+
+
 
 ### Basics
 ```scala
@@ -112,7 +129,7 @@ $ YOUR_SPARK_HOME/bin/spark-submit \
 Lines with a: 46, Lines with b: 23
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0MzUxNjIyMywxODAwMDk3MDYwLDk5Mj
-QwMDE4NiwxMjM4MjE1MzQ2LDIwNzE2Mzk4NTUsNzQwMTgxNjYz
-LDEwMzQ0NTgyMDIsLTk4MTMxMzY2MF19
+eyJoaXN0b3J5IjpbNzI0NzA5Njg5LC0zNDM1MTYyMjMsMTgwMD
+A5NzA2MCw5OTI0MDAxODYsMTIzODIxNTM0NiwyMDcxNjM5ODU1
+LDc0MDE4MTY2MywxMDM0NDU4MjAyLC05ODEzMTM2NjBdfQ==
 -->
