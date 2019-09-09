@@ -16,7 +16,7 @@ object Test1 {
 ### function
 ```scala
 rdd.map(_*2)
-rdd.map(x =
+rdd.map(x => x*2)  // equivalent
 ```
 
 
@@ -135,8 +135,8 @@ $ YOUR_SPARK_HOME/bin/spark-submit \
 Lines with a: 46, Lines with b: 23
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTIyMDkxNjA5LDcyNDcwOTY4OSwtMzQzNT
-E2MjIzLDE4MDAwOTcwNjAsOTkyNDAwMTg2LDEyMzgyMTUzNDYs
-MjA3MTYzOTg1NSw3NDAxODE2NjMsMTAzNDQ1ODIwMiwtOTgxMz
-EzNjYwXX0=
+eyJoaXN0b3J5IjpbMjA1ODA4OTIwOCw3MjQ3MDk2ODksLTM0Mz
+UxNjIyMywxODAwMDk3MDYwLDk5MjQwMDE4NiwxMjM4MjE1MzQ2
+LDIwNzE2Mzk4NTUsNzQwMTgxNjYzLDEwMzQ0NTgyMDIsLTk4MT
+MxMzY2MF19
 -->
