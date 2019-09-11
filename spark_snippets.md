@@ -5,8 +5,6 @@ Global Libraries: scala-sdk-2.12.7
 Libraries: spark-2.4.4
 
 
-
-
 ### Sample
 ```scala
 import org.apache.spark.{SparkConf, SparkContext}  
@@ -144,8 +142,8 @@ $ YOUR_SPARK_HOME/bin/spark-submit \
 Lines with a: 46, Lines with b: 23
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5NTA4NzYxLDIwNTgwODkyMDgsNzI0Nz
-A5Njg5LC0zNDM1MTYyMjMsMTgwMDA5NzA2MCw5OTI0MDAxODYs
-MTIzODIxNTM0NiwyMDcxNjM5ODU1LDc0MDE4MTY2MywxMDM0ND
-U4MjAyLC05ODEzMTM2NjBdfQ==
+eyJoaXN0b3J5IjpbLTQxNTEzODE2NSwyMDU4MDg5MjA4LDcyND
+cwOTY4OSwtMzQzNTE2MjIzLDE4MDAwOTcwNjAsOTkyNDAwMTg2
+LDEyMzgyMTUzNDYsMjA3MTYzOTg1NSw3NDAxODE2NjMsMTAzND
+Q1ODIwMiwtOTgxMzEzNjYwXX0=
 -->
