@@ -26,9 +26,6 @@ rdd.map(_*2)
 rdd.map(x => x*2)  // equivalent
 ```
 
-
-
-
 ### Basics
 ```scala
 val a = spark.read.textFile("a.txt")
@@ -142,8 +139,8 @@ $ YOUR_SPARK_HOME/bin/spark-submit \
 Lines with a: 46, Lines with b: 23
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxNTEzODE2NSwyMDU4MDg5MjA4LDcyND
-cwOTY4OSwtMzQzNTE2MjIzLDE4MDAwOTcwNjAsOTkyNDAwMTg2
-LDEyMzgyMTUzNDYsMjA3MTYzOTg1NSw3NDAxODE2NjMsMTAzND
-Q1ODIwMiwtOTgxMzEzNjYwXX0=
+eyJoaXN0b3J5IjpbLTE3Mjc0NjA5OTEsMjA1ODA4OTIwOCw3Mj
+Q3MDk2ODksLTM0MzUxNjIyMywxODAwMDk3MDYwLDk5MjQwMDE4
+NiwxMjM4MjE1MzQ2LDIwNzE2Mzk4NTUsNzQwMTgxNjYzLDEwMz
+Q0NTgyMDIsLTk4MTMxMzY2MF19
 -->
