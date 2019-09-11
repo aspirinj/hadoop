@@ -8,6 +8,7 @@ Global libraries -> Remove SDK
 and then, add scala-sdk-2.12.7
 
 
+
 ### Sample
 ```scala
 import org.apache.spark.{SparkConf, SparkContext}  
@@ -142,7 +143,7 @@ $ YOUR_SPARK_HOME/bin/spark-submit \
 Lines with a: 46, Lines with b: 23
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzM5MzIyOTcsLTE3Mjc0NjA5OTEsMj
+eyJoaXN0b3J5IjpbLTIwMjYzMjY4MTEsLTE3Mjc0NjA5OTEsMj
 A1ODA4OTIwOCw3MjQ3MDk2ODksLTM0MzUxNjIyMywxODAwMDk3
 MDYwLDk5MjQwMDE4NiwxMjM4MjE1MzQ2LDIwNzE2Mzk4NTUsNz
 QwMTgxNjYzLDEwMzQ0NTgyMDIsLTk4MTMxMzY2MF19
