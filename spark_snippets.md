@@ -1,5 +1,9 @@
 
 ### Setup in IntelliJ
+SDK: JDK 1.8
+Global Libraries: scala-sdk-2.12.7
+Libraries: spark-2.4.4
+
 
 
 
@@ -140,7 +144,7 @@ $ YOUR_SPARK_HOME/bin/spark-submit \
 Lines with a: 46, Lines with b: 23
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTE4NzcwNzAwLDIwNTgwODkyMDgsNzI0Nz
+eyJoaXN0b3J5IjpbLTc5NTA4NzYxLDIwNTgwODkyMDgsNzI0Nz
 A5Njg5LC0zNDM1MTYyMjMsMTgwMDA5NzA2MCw5OTI0MDAxODYs
 MTIzODIxNTM0NiwyMDcxNjM5ODU1LDc0MDE4MTY2MywxMDM0ND
 U4MjAyLC05ODEzMTM2NjBdfQ==
