@@ -3,6 +3,9 @@
 SDK: JDK 1.8
 Global Libraries: scala-sdk-2.12.7
 Libraries: spark-2.4.4
+if necessary: 
+Global libraries -> Remove SDK
+and then, add scala-sdk-2.12.7
 
 
 ### Sample
@@ -139,8 +142,8 @@ $ YOUR_SPARK_HOME/bin/spark-submit \
 Lines with a: 46, Lines with b: 23
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Mjc0NjA5OTEsMjA1ODA4OTIwOCw3Mj
-Q3MDk2ODksLTM0MzUxNjIyMywxODAwMDk3MDYwLDk5MjQwMDE4
-NiwxMjM4MjE1MzQ2LDIwNzE2Mzk4NTUsNzQwMTgxNjYzLDEwMz
-Q0NTgyMDIsLTk4MTMxMzY2MF19
+eyJoaXN0b3J5IjpbLTIwMzM5MzIyOTcsLTE3Mjc0NjA5OTEsMj
+A1ODA4OTIwOCw3MjQ3MDk2ODksLTM0MzUxNjIyMywxODAwMDk3
+MDYwLDk5MjQwMDE4NiwxMjM4MjE1MzQ2LDIwNzE2Mzk4NTUsNz
+QwMTgxNjYzLDEwMzQ0NTgyMDIsLTk4MTMxMzY2MF19
 -->
