@@ -25,8 +25,9 @@ object Test1 {
 ```
 ### eda
 ```scala
-rdd.partitions.length
-rdd.saveAsTextFile(path)
+rddName.partitions.length
+val rddName: RDD[String] = sc.textFile("C:\\Users\\3627777\\Downloads\\spark\\data\\wc", 1)
+rddName.saveAsTextFile(path)
 ```
 
 ### function
@@ -148,9 +149,9 @@ $ YOUR_SPARK_HOME/bin/spark-submit \
 Lines with a: 46, Lines with b: 23
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzI5OTc2NzUsLTE4NDU2MzI5MzcsLT
-IwMjYzMjY4MTEsLTE3Mjc0NjA5OTEsMjA1ODA4OTIwOCw3MjQ3
-MDk2ODksLTM0MzUxNjIyMywxODAwMDk3MDYwLDk5MjQwMDE4Ni
-wxMjM4MjE1MzQ2LDIwNzE2Mzk4NTUsNzQwMTgxNjYzLDEwMzQ0
-NTgyMDIsLTk4MTMxMzY2MF19
+eyJoaXN0b3J5IjpbMTA5MTU4NjMyLC0xNDcyOTk3Njc1LC0xOD
+Q1NjMyOTM3LC0yMDI2MzI2ODExLC0xNzI3NDYwOTkxLDIwNTgw
+ODkyMDgsNzI0NzA5Njg5LC0zNDM1MTYyMjMsMTgwMDA5NzA2MC
+w5OTI0MDAxODYsMTIzODIxNTM0NiwyMDcxNjM5ODU1LDc0MDE4
+MTY2MywxMDM0NDU4MjAyLC05ODEzMTM2NjBdfQ==
 -->
